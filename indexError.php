@@ -3,7 +3,7 @@
     
         <form method="POST" action="logica/loguear.php">
 
-            <input type="text" name="no_cuenta" placeholder="Numero de Cuenta" />
+            <input type="text" name="numCuenta" placeholder="Numero de Cuenta" />
             <br />
             <input type="text" name="clave" placeholder="Contraseña" />
             <br />

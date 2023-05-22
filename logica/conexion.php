@@ -7,10 +7,10 @@
 // $pass_db = "aSB!BNaO&4c<D2lo";
 // $db_name = "id20310744_test_php";
 
-$host_db = "localhost:3308";
+$host_db = "localhost:3306";
 $user_db = "root";
-$pass_db = "123456";
-$db_name = "persona";
+$pass_db = "contrasql";
+$db_name = "usuarios";
 
 
 
