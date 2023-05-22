@@ -1,55 +1,49 @@
 <?php
 
-require 'conexion.php';
+//require 'conexion.php';
 
-session_start();
+$usuariodado = $_REQUEST['Cuenta'];
+$clave = $_REQUEST['clave'];
 
+include "conexion.php";
 
+$consulta = "SELECT * FROM usuarios.usuario WHERE numCuenta='".$usuariodado."'";
 
-$numCuenta = $_POST['numCuenta'];
-
-$clave = $_POST['clave'];
-
-
-
-
-
-//La función COUNT devuelve el número de filas de la consulta, es decir, el número de registros que cumplen una determinada condición.
+$resultado = $conexion->query($consulta);
 
 
 
-//Los valores nulos no serán contabilizados
+while ($row = $resultado->fetch_row()) {
+	$numCuenta = $row[0];
+	echo $numCuenta;
+	$nickdb = $row[1];
+	$passdb = $row[6];
+	$tipodb = $row[8];
+}
 
-$q = "SELECT COUNT(*) as contar from usuario where numCuenta= '$numCuenta' and password = '$clave'";
-
-
-
-$consulta = mysqli_query($conexion, $q);
-
-
-
-$array = mysqli_fetch_array($consulta);
-
-
-
-if ($array['contar'] > 0) {
-
-
+$entrada = false;
+if ($usuariodado==$numCuenta && $clave==$passdb) {
 
     // en la variable session se guarda el numero de cuenta esto para poder acarrearla
+    if($tipodb == 1){
+        $entrada = true;
+        session_start();
+        $_SESSION['admin'] = true;
+        $_SESSION['usermane'] = $numCuenta;
+        header("location: ../Principal.php");
 
-    $_SESSION['usermane'] = $numCuenta;
+    }elseif($tipodb == 0){
+        $entrada = true;
+        session_start();
+        $_SESSION['user'] = true;
+        $_SESSION['usermane'] = $numCuenta;
+        header("location: ../Principal.php");
+    }
+    
 
-
-
-    header("location: ../Principal.php");
-
-} else {
-
-
-
-    header("location: ../indexError.php");
-
-}
+    if ($entrada==false) {
+        header("location: ../indexError.php");
+    }
+} 
 
 ?>

@@ -4,7 +4,7 @@
         <form method="POST" action="logica/loguear.php">
             <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">NUMERO DE CUENTA</label>
-            <input type="text" class="form-control" name="numCuenta" placeholder="Numero de Cuenta" />
+            <input type="text" class="form-control" name="Cuenta" placeholder="Numero de Cuenta" />
             </div>
             <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">CONTRASEÑA</label>
