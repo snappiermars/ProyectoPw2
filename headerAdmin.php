@@ -23,7 +23,16 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php">Login</a>
         </li>
-        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuarios
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Listar usuarios</a></li>
+            <li><a class="dropdown-item" href="#">Dar de baja</a></li>
+            <li><a class="dropdown-item" href="#">Actualizar usuario</a></li>
+          </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link disabled">PROGRAMACION WEB 2</a>
         </li>

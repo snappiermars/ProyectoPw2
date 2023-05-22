@@ -7,13 +7,21 @@ if(!isset($numCuenta)){
 
         header("location: index.php");
 }else{
-    include "header.php";
+    if($_SESSION['admin'] == true){
+
     
+    include "headerAdmin.php";
+}
+    else{
+    include "header.php";
+}
 
     //echo "<h1> hola tu numero de cuenta es $numCuenta </h1> ";
     if ($_SESSION['admin'] == true){
-        echo "<h1> Bienvenido admin $numCuenta</h1>";
-    }elseif($_SESSION['user'] == true){
+        echo "<h1> Bienvenido admin $numCuenta</h1> 
+        <br> 
+        <p>Hola que tal estoy probando algunas cosas</p>";
+    }elseif($_SESSION['admin'] == false){
         echo "<h1> Bienvenido usuario $numCuenta</h1>";
     }
     

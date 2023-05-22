@@ -35,15 +35,16 @@ if ($usuariodado==$numCuenta && $clave==$passdb) {
     }elseif($tipodb == 0){
         $entrada = true;
         session_start();
-        $_SESSION['user'] = true;
+        $_SESSION['admin'] = false;
         $_SESSION['usermane'] = $numCuenta;
         header("location: ../Principal.php");
     }
     
 
-    if ($entrada==false) {
-        header("location: ../indexError.php");
-    }
+    
 } 
+if ($entrada==false) {
+    header("location: ../indexError.php");
+}
 
 ?>
