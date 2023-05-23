@@ -30,7 +30,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Listar usuarios</a></li>
             <li><a class="dropdown-item" href="#">Dar de baja</a></li>
-            <li><a class="dropdown-item" href="#">Actualizar usuario</a></li>
+            <li><a class="dropdown-item" href="actualizar.php">Actualizar usuario</a></li>
           </ul>
         </li>
         <li class="nav-item">
