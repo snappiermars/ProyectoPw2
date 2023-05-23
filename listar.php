@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-$inc = include "conexion.php";
+$inc = include "logica/conexion.php";
 if($inc){
     $consulta = "SELECT * FROM usuarios.usuario";
     $resultado = mysqli_query($conexion,$consulta);
@@ -9,9 +9,7 @@ if($inc){
         if($_SESSION['admin'] == false){
             header("location: ../Principal.php");
         }
-        include "../headerAdmin.php";
-        
-
+        include "headerAdmin.php";
         ?>
     <table class="table">
         <thead>
@@ -27,8 +25,6 @@ if($inc){
         </tr>
         </thead>
         <tbody class="table-group-divider">
-    
-
         <?php
         while ($row = $resultado->fetch_array()){
             $cuenta = $row["numCuenta"];
@@ -58,5 +54,5 @@ if($inc){
 	<?php
 }
 }
-include "../footer.php"
+include "footer.php"
 ?>

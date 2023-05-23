@@ -22,7 +22,7 @@ if(!isset($numCuenta)){
         <h2>Listar usuario</h2>
         <!--Contenedor del forms -->
         <div>
-            <form method="post" action="logica/listar.php">
+            <form method="post" action="listar.php">
             <button  type="submit" class=" btn btn-info" >Listar usuarios </button>
             </form>
         </div>
