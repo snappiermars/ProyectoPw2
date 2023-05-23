@@ -11,6 +11,7 @@ if($inc){
         }
         include "headerAdmin.php";
         ?>
+    <div class="container-fluid">
     <table class="table">
         <thead>
             <tr>
@@ -51,6 +52,7 @@ if($inc){
         ?>
             </tbody>
         </table>
+        </div>
 	<?php
 }
 }
