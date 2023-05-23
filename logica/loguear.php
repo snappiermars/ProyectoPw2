@@ -7,7 +7,7 @@ $clave = $_REQUEST['clave'];
 
 include "conexion.php";
 
-$consulta = "SELECT * FROM usuarios.usuario WHERE numCuenta='".$usuariodado."'";
+$consulta = "SELECT * FROM usuario WHERE numCuenta='".$usuariodado."'";
 
 $resultado = $conexion->query($consulta);
 

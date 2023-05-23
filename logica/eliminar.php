@@ -4,7 +4,7 @@ $idreceiveduser = $_REQUEST['idusuario'];
 
 include "conexion.php";
 
-$consulta = "DELETE FROM usuarios.usuario WHERE numCuenta='".$idreceiveduser."'";
+$consulta = "DELETE FROM usuario WHERE numCuenta='".$idreceiveduser."'";
 
 if (mysqli_query($conexion,$consulta)) {
 	echo "<script>confirm('Usuario eliminado');</script>
