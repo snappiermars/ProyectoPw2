@@ -3,7 +3,7 @@ session_start();
 
 $inc = include "logica/conexion.php";
 if($inc){
-    $consulta = "SELECT * FROM usuarios.usuario";
+    $consulta = "SELECT * FROM usuario";
     $resultado = mysqli_query($conexion,$consulta);
     if ($resultado) {
         if($_SESSION['admin'] == false){
