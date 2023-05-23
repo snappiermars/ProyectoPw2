@@ -21,7 +21,7 @@
           <a class="nav-link active" aria-current="page" href="principal.php">Principal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Login</a>
+          <a class="nav-link" href="logica/salir.php">Cerrar sesion</a>
         </li>
         
         <li class="nav-item">

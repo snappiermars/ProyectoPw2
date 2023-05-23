@@ -21,15 +21,15 @@
           <a class="nav-link active" aria-current="page" href="principal.php">Principal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Login</a>
+          <a class="nav-link" href="logica/salir.php">Cerrar sesion</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Usuarios
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Listar usuarios</a></li>
-            <li><a class="dropdown-item" href="quitarUsuario.php">ELiminar usuario</a></li>
+            <li><a class="dropdown-item" href="listarUsuario.php">Listar usuarios</a></li>
+            <li><a class="dropdown-item" href="quitarUsuario.php">Eliminar usuario</a></li>
             <li><a class="dropdown-item" href="actualizar.php">Actualizar usuario</a></li>
           </ul>
         </li>

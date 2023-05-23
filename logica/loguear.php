@@ -29,7 +29,7 @@ if ($usuariodado==$numCuenta && $clave==$passdb) {
         $entrada = true;
         session_start();
         $_SESSION['admin'] = true;
-        $_SESSION['usermane'] = $numCuenta;
+        $_SESSION['usermane'] = $nickdb;
         header("location: ../Principal.php");
 
     }elseif($tipodb == 0){
@@ -46,5 +46,5 @@ if ($usuariodado==$numCuenta && $clave==$passdb) {
 if ($entrada==false) {
     header("location: ../indexError.php");
 }
-
+include "footer.php"
 ?>

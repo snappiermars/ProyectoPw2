@@ -30,7 +30,6 @@ if(!isset($numCuenta)){
 
     
 
-    echo "<a href='logica/salir.php'> SALIR</a>";
 
     include "footer.php";
 

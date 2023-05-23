@@ -8,13 +8,11 @@ if(!isset($numCuenta)){
         header("location: index.php");
 }else{
     if($_SESSION['admin'] == true){
-
-    
-    include "headerAdmin.php";
-}
-    else{
-    include "header.php";
-}
+        include "headerAdmin.php";
+    }
+        else{
+        include "header.php";
+    }
 
     if ($_SESSION['admin'] == true){
         echo "<h1> Bienvenido admin $numCuenta al apartado de actualizar usuario</h1>";
@@ -71,13 +69,6 @@ if(!isset($numCuenta)){
         echo "<h1> Usuario $numCuenta no deberia tener acceso a esto</h1>";
     }
     
-
-
-
-    
-
-    echo "<a href='logica/salir.php'> SALIR</a>";
-
     include "footer.php";
 
 
